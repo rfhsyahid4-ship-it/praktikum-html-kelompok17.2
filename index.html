@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+< lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelompok 17 - Desain UI/UX Pemrograman Web</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #222;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #555;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        header .icon {
+            font-size: 45px;
+        }
+
+        header h1 {
+            margin: 5px 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 0;
+            color: #555;
+        }
+
+        /* INTRO */
+        .intro {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fafafa;
+        }
+
+        .intro h2 {
+            margin: 0 0 8px;
+            font-size: 20px;
+        }
+
+        .intro p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* GRID ANGGOTA */
+        .anggota-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .anggota {
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            padding: 12px;
+            background-color: #fff;
+        }
+
+        /* ANGGOTA 5 DI TENGAH */
+        .anggota:nth-child(5) {
+            grid-column: 1 / 3;
+            width: 50%;
+            justify-self: center;
+        }
+
+        .anggota-content {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* FOTO */
+        .foto {
+            width: 120px;
+            height: 120px;
+            border: 1px solid #aaa;
+            flex-shrink: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #f5f5f5;
+            color: #555;
+        }
+
+        .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* DATA BIODATA */
+        .biodata {
+            flex: 1;
+        }
+
+        .nama {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .nama h3 {
+            margin: 0;
+            font-size: 17px;
+        }
+
+        .role {
+            background-color: #ddd;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+        }
+
+        .data {
+            display: grid;
+            grid-template-columns: 70px 10px 1fr;
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+
+        /* FOOTER DALAM CARD */
+        .info-tambahan {
+            margin-top: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 7px;
+            font-size: 12px;
+            background-color: #f7f7f7;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 20px;
+            padding: 15px;
+            text-align: center;
+            border-top: 2px solid #555;
+            color: #555;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+
+            .anggota-container {
+                grid-template-columns: 1fr;
+            }
+
+            .anggota:nth-child(5) {
+                grid-column: auto;
+                width: 100%;
+            }
+
+            .anggota-content {
+                flex-direction: column;
+            }
+
+            .foto {
+                width: 100%;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="icon">👥</div>
+
+            <h1>Kelompok 17</h1>
+
+            <p>Desain UI/UX & Pemrograman Web</p>
+        </header>
+
+
+        <!-- DATA ANGGOTA -->
+        <section class="anggota-container">
+
+            <!-- ANGGOTA 1 -->
+            <div class="anggota">
+
+                <div class="anggota-content">
+
+                    <div class="foto">
+                      <img src="foto/anggota_1.jpg" alt="Foto Anggota 1">
+                    </div>
+
+                    <div class="biodata">
+
+                        <div class="nama">
+                            <h3>Refah Syahidah</h3>
+                            <span class="role">Anggota</span>
+                        </div>
+
+                        <div class="data">
+                            <span>NIM</span>
+                            <span>:</span>
+                            <span>0110226148</span>
+                        </div>
+
+                        <div class="data">
+                            <span>Prodi</span>
+                            <span>:</span>
+                            <span>Teknik Informatika</span>
+                        </div>
+
+                        <div class="data">
+                            <span>TTL</span>
+                            <span>:</span>
+                            <span>Bogor, 25 November 2007</span>
+                        </div>
+
+                        <div class="data">
+                            <span>Hobi</span>
+                            <span>:</span>
+                            <span>Menggambar</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- ANGGOTA 2 -->
+            <div class="anggota">
+
+                <div class="anggota-content">
+
+                    <div class="foto">
+                      <img src="foto/anggota_ 2.jpg" alt="Foto Anggota 2">
+                    </div>
+
+                    <div class="biodata">
+
+                        <div class="nama">
+                            <h3>Razip Adi Pratama</h3>
+                            <span class="role">Anggota</span>
+                        </div>
+
+                        <div class="data">
+                            <span>NIM</span>
+                            <span>:</span>
+                            <span>0110226095</span>
+                        </div>
+
+                        <div class="data">
+                            <span>Prodi</span>
+                            <span>:</span>
+                            <span>Teknik Informatika</span>
+                        </div>
+
+                        <div class="data">
+                            <span>TTL</span>
+                            <span>:</span>
+                            <span>Bogor, 04 Juli 2008</span>
+                        </div>
+
+                        <div class="data">
+                            <span>Hobi</span>
+                            <span>:</span>
+                            <span>Mancing</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ANGGOTA 3 -->
+            <div class="anggota">
+
+                <div class="anggota-content">
+
+                    <div class="foto">
+                      <img src="foto/anggota_3.jpg" alt="Foto Anggota 3">
+                    </div>
+                  
+                    <div class="biodata">
+
+                        <div class="nama">
+                            <h3>Reza Muhammad Ilham</h3>
+                            <span class="role">Anggota</span>
+                        </div>
+
+                        <div class="data">
+                            <span>NIM</span>
+                            <span>:</span>
+                            <span>0110226010</span>
+                        </div>
+
+                        <div class="data">
+                            <span>Prodi</span>
+                            <span>:</span>
+                            <span>Teknik Informatika</span>
+                        </div>
+
+                        <div class="data">
+                            <span>TTL</span>
+                            <span>:</span>
+                            <span>Depok, 1 Desember 2006</span>
+                        </div>
+
+                        <div class="data">
+                            <span>Hobi</span>
+                            <span>:</span>
+                            <span>Futsal</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ANGGOTA 4 -->
+            <div class="anggota">
+
+                <div class="anggota-content">
+
+                    <div class="foto">
+                      <img src="foto/anggota_4.jpg" alt="Foto Anggota 4">
+                    </div>
+                  
+                    <div class="biodata">
+
+                        <div class="nama">
+                            <h3>Rayan Maulana Y.P. Pratama</h3>
+                            <span class="role">Anggota</span>
+                        </div>
+
+                        <div class="data">
+                            <span>NIM</span>
+                            <span>:</span>
+                            <span>0110226107</span>
+                        </div>
+
+                        <div class="data">
+                            <span>Prodi</span>
+                            <span>:</span>
+                            <span>Teknik Informatika</span>
+                        </div>
+
+                        <div class="data">
+                            <span>TTL</span>
+                            <span>:</span>
+                            <span>Sumedang, 30 Juni 2007</span>
+                        </div>
+
+                        <div class="data">
+                            <span>Hobi</span>
+                            <span>:</span>
+                            <span>Editing</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+          <!-- ANGGOTA 5 -->
+            <div class="anggota">
+
+                <div class="anggota-content">
+
+                    <div class="foto">
+                      <img src="foto/anggota_5.jpg" alt="Foto Anggota 5">
+                    </div>
+                  
+                    <div class="biodata">
+
+                        <div class="nama">
+                            <h3>Rayhan Wima Pratama</h3>
+                            <span class="role">Anggota</span>
+                        </div>
+
+                        <div class="data">
+                            <span>NIM</span>
+                            <span>:</span>
+                            <span>0110226072</span>
+                        </div>
+
+                        <div class="data">
+                            <span>Prodi</span>
+                            <span>:</span>
+                            <span>Teknik Informatika</span>
+                        </div>
+
+                        <div class="data">
+                            <span>TTL</span>
+                            <span>:</span>
+                            <span>Bogor, 11 September 2007</span>
+                        </div>
+
+                        <div class="data">
+                            <span>Hobi</span>
+                            <span>:</span>
+                            <span>Badminton</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            Kelompok 17
+        </footer>
+
+    </div>
+
+</body>
+</html>
